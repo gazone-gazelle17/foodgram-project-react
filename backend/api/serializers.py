@@ -4,13 +4,13 @@ from django.contrib.auth import get_user_model
 from rest_framework import serializers
 from users.models import Follow
 from recipes.models import (
- Tag,
- Product,
- Recipe,
- PurchaseList,
- Favorite,
- IngredientToRecipe
- )
+    Tag,
+    Product,
+    Recipe,
+    PurchaseList,
+    Favorite,
+    IngredientToRecipe
+)
 
 
 User = get_user_model()

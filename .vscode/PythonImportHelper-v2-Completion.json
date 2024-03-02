@@ -630,7 +630,7 @@
         "kind": 6,
         "importPath": "backend.api.permissions",
         "description": "backend.api.permissions",
-        "peekOfCode": "class OwnerOrReadOnly(permissions.BasePermission):\n    def __init__(self, field_name='author'):\n        self.field_name = field_name\n    def has_permission(self, request, view):\n        return (\n                request.method in permissions.SAFE_METHODS\n                or request.user.is_authenticated\n            )\n    def has_object_permission(self, request, view, obj):\n        return getattr(obj, self.field_name) == request.user",
+        "peekOfCode": "class OwnerOrReadOnly(permissions.BasePermission):\n    def __init__(self, field_name='author'):\n        self.field_name = field_name\n    def has_permission(self, request, view):\n        return (\n            request.method in permissions.SAFE_METHODS\n            or request.user.is_authenticated\n        )\n    def has_object_permission(self, request, view, obj):\n        return getattr(obj, self.field_name) == request.user",
         "detail": "backend.api.permissions",
         "documentation": {}
     },
@@ -918,7 +918,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',",
+        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102'\n]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -927,7 +927,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',\n    'api.apps.ApiConfig',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -936,7 +936,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',\n    'api.apps.ApiConfig',\n    'django.contrib.admin',",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',\n    'api.apps.ApiConfig',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1271,15 +1271,6 @@
         "description": "backend.recipes.models",
         "peekOfCode": "User = get_user_model()\nclass Tag(models.Model):\n    \"\"\"Модель тега для поиска рецептов.\"\"\"\n    COLOR_PALETTE = [\n        ('#FF0000', 'red'),\n        ('#FFC0CB', 'pink'),\n        ('#FFA500', 'orange'),\n        ('#FFFF00', 'yellow'),\n        ('#800080', 'purple'),\n        ('#FFFFFF', 'white'),",
         "detail": "backend.recipes.models",
-        "documentation": {}
-    },
-    {
-        "label": "update_purchase_list_totals",
-        "kind": 2,
-        "importPath": "backend.recipes.utils",
-        "description": "backend.recipes.utils",
-        "peekOfCode": "def update_purchase_list_totals(purchase_list):\n    recipes = purchase_list.recipes.all()\n    total_quantities = {}\n    for recipe in recipes:\n        ingredients = Ingredient.objects.filter(recipe=recipe)\n# ниже внимательно переделать!\n        for ingredient in ingredients:\n            if ingredient not in total_quantities.keys:\n                # то добавляем ингредиент в словарь в качестве ключа, а потом в значении на каждой итерации прибавляем количество\n            total_quantities.setdefault(ingredient.product, 0)",
-        "detail": "backend.recipes.utils",
         "documentation": {}
     },
     {

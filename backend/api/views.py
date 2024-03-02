@@ -157,7 +157,8 @@ class RecipeViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(
                 tags__in=tags).distinct()
         if request.query_params.get('author'):
-            queryset = queryset.filter(author_id=request.query_params['author'])
+            queryset = queryset.filter(
+                author_id=request.query_params['author'])
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
@@ -271,7 +272,7 @@ class FollowRetrieveDeleteView(
             return Response(
                 {"message": "Вы успешно отписались от пользователя."},
                 status=status.HTTP_204_NO_CONTENT
-                )
+            )
 
 
 class FavoriteRetrieveDeleteView(
