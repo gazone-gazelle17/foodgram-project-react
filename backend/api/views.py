@@ -43,7 +43,7 @@ class UserListCreateView(generics.ListCreateAPIView):
         if serializer.is_valid():
             serializer.save()
             data = serializer.data
-            del data['is_subscribed']
+            data.pop('is_subscribed')
             return Response(data, status=status.HTTP_201_CREATED)
         else:
             return Response(
@@ -131,7 +131,8 @@ class IngredientViewset(viewsets.ModelViewSet):
 
 class RecipeViewSet(viewsets.ModelViewSet):
 
-    queryset = Recipe.objects.all()
+    queryset = Recipe.objects.prefetch_related(
+        'tags', 'ingredients').select_related('author').all()
     serializer_class = RecipeSerializer
     filter_backends = (filters.OrderingFilter,)
     ordering = ('-pub_date',)

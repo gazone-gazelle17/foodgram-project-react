@@ -72,7 +72,7 @@ class Recipe(models.Model):
     )
     text = models.TextField(verbose_name='Описание')
     cooking_time = models.PositiveIntegerField(
-        verbose_name='Время приготовления в минутах')
+        verbose_name='Время приготовления в минутах', max_value=1000)
     pub_date = models.DateTimeField(auto_now_add=True,
                                     verbose_name='Дата публикации')
 

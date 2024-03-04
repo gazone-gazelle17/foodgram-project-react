@@ -2,6 +2,8 @@ from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
 from django.db import models
 
+from .manager import CustomUserManager
+
 
 class CustomUser(AbstractUser):
     username = models.CharField(
@@ -22,6 +24,9 @@ class CustomUser(AbstractUser):
         verbose_name='Фамилия пользователя',
         max_length=150,
     )
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+    objects = CustomUserManager()
 
     class Meta:
         ordering = ['username']
