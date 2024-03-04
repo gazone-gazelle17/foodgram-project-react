@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator
 from django.contrib.auth import get_user_model
 from django.db import models
 from autoslug import AutoSlugField
@@ -72,7 +73,9 @@ class Recipe(models.Model):
     )
     text = models.TextField(verbose_name='Описание')
     cooking_time = models.PositiveIntegerField(
-        verbose_name='Время приготовления в минутах', max_value=1000)
+        verbose_name='Время приготовления в минутах',
+        validators=[MaxValueValidator(1000)]
+    )
     pub_date = models.DateTimeField(auto_now_add=True,
                                     verbose_name='Дата публикации')
 
