@@ -120,7 +120,7 @@ class FollowSerializer(serializers.ModelSerializer):
         return serialized_recipes
 
     def get_recipes_count(self, obj):
-        return obj.author.recipes.all().count()
+        return obj.author.recipes.count()
 
 
 class TagSerializer(serializers.ModelSerializer):

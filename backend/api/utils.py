@@ -1,5 +1,9 @@
 from io import BytesIO
+
 from fpdf import FPDF
+
+
+FONT = 'DejaVuSans'
 
 
 class JsonToPdf(FPDF):
@@ -8,14 +12,14 @@ class JsonToPdf(FPDF):
     def __init__(self):
         """Настройка фона."""
         super().__init__()
-        self.add_font('DejaVuSans',
+        self.add_font(FONT,
                       '',
-                      'fonts/DejaVuSans-Bold.ttf',
+                      f'fonts/{FONT}-Bold.ttf',
                       uni=1)
 
     def header(self):
         """Настройка шапки."""
-        self.set_font('DejaVuSans', '', 12)
+        self.set_font(FONT, '', 12)
         self.multi_cell(0, 10,
                         txt='Список покупок:',
                         border=0, align='C', ln=1
@@ -25,14 +29,14 @@ class JsonToPdf(FPDF):
     def footer(self):
         """Настройка подвала."""
         self.set_y(-25)
-        self.set_font('DejaVuSans', '', 10)
+        self.set_font(FONT, '', 10)
         self.cell(30, 10, 'Foodgram. Inc.', ln=1)
         self.cell(0, 10, f'Page {self.page_no()}', align='C')
 
     def json_transformer(self, final_ingredients: dict):
         """Логика преобразования в PDF."""
         self.add_page()
-        self.set_font('DejaVuSans', '', 10)
+        self.set_font(FONT, '', 10)
         self.set_auto_page_break(auto=1, margin=20)
         self.multi_cell(0, 10,
                         f'Список покупок для рецептов '

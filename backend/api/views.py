@@ -310,14 +310,11 @@ class FavoriteRetrieveDeleteView(
         """Удаляет рецепт."""
         recipe_id = self.kwargs['pk']
         recipe_to_delete = Recipe.objects.get(pk=recipe_id)
-        if Favorite.objects.filter(
-                author=request.user,
-                recipe=recipe_to_delete
-        ).exists():
-            Favorite.objects.get(
-                author=request.user,
-                recipe=recipe_to_delete
-            ).delete()
+        deleted_count, _ = Favorite.objects.filter(
+            author=request.user,
+            recipe=recipe_to_delete
+        ).delete()
+        if deleted_count:
             return Response(
                 {"message": "Запись успешно удалена."},
                 status=status.HTTP_204_NO_CONTENT
@@ -359,14 +356,11 @@ class ShoppingListRetrieveDeleteView(
     def delete(self, request, *args, **kwargs):
         """Удаляет рецепт."""
         recipe_to_delete = self.kwargs['pk']
-        if PurchaseList.objects.filter(
-                author=request.user,
-                recipe=recipe_to_delete
-        ).exists():
-            PurchaseList.objects.get(
-                author=request.user,
-                recipe=recipe_to_delete
-            ).delete()
+        deleted_count, _ = PurchaseList.objects.filter(
+            author=request.user,
+            recipe=recipe_to_delete
+        ).delete()
+        if deleted_count:
             return Response(
                 {"message": "Запись успешно удалена."},
                 status=status.HTTP_204_NO_CONTENT

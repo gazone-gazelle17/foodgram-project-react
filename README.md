@@ -1,4 +1,4 @@
 # praktikum_new_diplom
-Адрес сервера: 51.250.106.102
+Адрес сервера: http://foodgram_reviewer.chickenkiller.com
 Логин администратора: admin
 Пароль администратора: adminpassword

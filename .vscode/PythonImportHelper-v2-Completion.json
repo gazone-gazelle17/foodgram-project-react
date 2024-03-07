@@ -426,6 +426,119 @@
         "documentation": {}
     },
     {
+        "label": "django.core.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MaxValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "autoslug.fields",
         "kind": 6,
         "isExtraImport": true,
@@ -449,78 +562,6 @@
         "description": "colorfield.fields",
         "isExtraImport": true,
         "detail": "colorfield.fields",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -596,14 +637,6 @@
         "description": "django.contrib.auth.admin",
         "isExtraImport": true,
         "detail": "django.contrib.auth.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Token",
-        "importPath": "rest_framework.authtoken.models",
-        "description": "rest_framework.authtoken.models",
-        "isExtraImport": true,
-        "detail": "rest_framework.authtoken.models",
         "documentation": {}
     },
     {
@@ -825,7 +858,16 @@
         "kind": 6,
         "importPath": "backend.api.utils",
         "description": "backend.api.utils",
-        "peekOfCode": "class JsonToPdf(FPDF):\n    \"\"\"Класс для формирования вывода в PDF.\"\"\"\n    def __init__(self):\n        \"\"\"Настройка фона.\"\"\"\n        super().__init__()\n        self.add_font('DejaVuSans',\n                      '',\n                      'fonts/DejaVuSans-Bold.ttf',\n                      uni=1)\n    def header(self):",
+        "peekOfCode": "class JsonToPdf(FPDF):\n    \"\"\"Класс для формирования вывода в PDF.\"\"\"\n    def __init__(self):\n        \"\"\"Настройка фона.\"\"\"\n        super().__init__()\n        self.add_font(FONT,\n                      '',\n                      f'fonts/{FONT}-Bold.ttf',\n                      uni=1)\n    def header(self):",
+        "detail": "backend.api.utils",
+        "documentation": {}
+    },
+    {
+        "label": "FONT",
+        "kind": 5,
+        "importPath": "backend.api.utils",
+        "description": "backend.api.utils",
+        "peekOfCode": "FONT = 'DejaVuSans'\nclass JsonToPdf(FPDF):\n    \"\"\"Класс для формирования вывода в PDF.\"\"\"\n    def __init__(self):\n        \"\"\"Настройка фона.\"\"\"\n        super().__init__()\n        self.add_font(FONT,\n                      '',\n                      f'fonts/{FONT}-Bold.ttf',\n                      uni=1)",
         "detail": "backend.api.utils",
         "documentation": {}
     },
@@ -951,7 +993,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -960,7 +1002,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102'\n]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram_reviewer.chickenkiller.com'\n]\n# Application definition",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -969,7 +1011,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram_reviewer.chickenkiller.com'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -978,7 +1020,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',\n    'api.apps.ApiConfig',",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram_reviewer.chickenkiller.com'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1032,7 +1074,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'foodgram.wsgi.application'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),",
+        "peekOfCode": "WSGI_APPLICATION = 'foodgram.wsgi.application'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('POSTGRES_DB', default='foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1041,7 +1083,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),\n        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('POSTGRES_DB', default='foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),\n        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1050,7 +1092,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),\n        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),\n        'HOST': os.getenv('DB_HOST', default='db'),",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('POSTGRES_DB', default='foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),\n        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),\n        'HOST': os.getenv('DB_HOST', default='db'),",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1059,7 +1101,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),\n        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),\n        'HOST': os.getenv('DB_HOST', default='db'),\n        'PORT': os.getenv('DB_PORT', default=5432),\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.getenv('POSTGRES_DB', default='foodgram'),\n        'USER': os.getenv('POSTGRES_USER', default='postgres'),\n        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),\n        'HOST': os.getenv('DB_HOST', default='db'),\n        'PORT': os.getenv('DB_PORT', default=5432),\n    }\n}",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1187,6 +1229,15 @@
         "description": "backend.foodgram.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "backend.foodgram.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.recipes.migrations.0001_alter_recipe_cooking_time",
+        "description": "backend.recipes.migrations.0001_alter_recipe_cooking_time",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('recipes', 'custom_migration'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='recipe',\n            name='cooking_time',\n            field=models.PositiveIntegerField(validators=[django.core.validators.MaxValueValidator(1000)], verbose_name='Время приготовления в минутах'),\n        ),",
+        "detail": "backend.recipes.migrations.0001_alter_recipe_cooking_time",
         "documentation": {}
     },
     {
@@ -1322,6 +1373,15 @@
         "description": "backend.users.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CustomUser',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
         "detail": "backend.users.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.users.migrations.0002_alter_customuser_managers",
+        "description": "backend.users.migrations.0002_alter_customuser_managers",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelManagers(\n            name='customuser',\n            managers=[\n            ],\n        ),",
+        "detail": "backend.users.migrations.0002_alter_customuser_managers",
         "documentation": {}
     },
     {
