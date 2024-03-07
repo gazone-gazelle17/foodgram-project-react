@@ -1002,7 +1002,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram_reviewer.chickenkiller.com'\n]\n# Application definition",
+        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram-reviewer.chickenkiller.com'\n]\n# Application definition",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1011,7 +1011,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram_reviewer.chickenkiller.com'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram-reviewer.chickenkiller.com'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },
@@ -1020,7 +1020,7 @@
         "kind": 5,
         "importPath": "backend.foodgram.settings",
         "description": "backend.foodgram.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram_reviewer.chickenkiller.com'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    'localhost',\n    '127.0.0.1',\n    '51.250.106.102',\n    'foodgram-reviewer.chickenkiller.com'\n]\n# Application definition\nINSTALLED_APPS = [\n    'users.apps.UsersConfig',\n    'recipes.apps.RecipesConfig',",
         "detail": "backend.foodgram.settings",
         "documentation": {}
     },

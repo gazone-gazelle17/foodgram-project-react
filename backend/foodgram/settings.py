@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '51.250.106.102',
-    'foodgram_reviewer.chickenkiller.com'
+    'foodgram-reviewer.chickenkiller.com'
 ]
 
 
