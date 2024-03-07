@@ -29,10 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '51.250.106.102',
-    'foodgram-reviewer.chickenkiller.com'
+    '*'
 ]
 
 
