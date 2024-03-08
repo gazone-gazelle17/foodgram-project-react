@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from django.contrib.auth import get_user_model
 from rest_framework import generics, status, viewsets, filters
@@ -228,13 +229,7 @@ class FollowRetrieveDeleteView(
     def post(self, request, *args, **kwargs):
         """Создает подписку."""
         author_id = self.kwargs['pk']
-        try:
-            author = User.objects.get(pk=author_id)
-        except User.DoesNotExist:
-            return Response(
-                {"error": "Пользователь не найден"},
-                status=status.HTTP_404_NOT_FOUND
-            )
+        author = get_object_or_404(User, pk=author_id)
         if Follow.objects.filter(
             author=author,
             follower=self.request.user
@@ -261,7 +256,7 @@ class FollowRetrieveDeleteView(
     def delete(self, request, *args, **kwargs):
         """Удаляет подписку."""
         author_id = self.kwargs['pk']
-        author = User.objects.get(pk=author_id)
+        author = get_object_or_404(User, pk=author_id)
         if Follow.objects.filter(
             author=author,
             follower=self.request.user
@@ -290,7 +285,7 @@ class FavoriteRetrieveDeleteView(
     def post(self, request, *args, **kwargs):
         """Добавляет рецепт."""
         recipe_id = self.kwargs['pk']
-        favorite_recipe = Recipe.objects.get(pk=recipe_id)
+        favorite_recipe = get_object_or_404(Recipe, pk=recipe_id)
         if Favorite.objects.filter(
                 author=request.user,
                 recipe=favorite_recipe
@@ -337,7 +332,7 @@ class ShoppingListRetrieveDeleteView(
     def post(self, request, *args, **kwargs):
         """Добавляет рецепт."""
         recipe_id = self.kwargs['pk']
-        favorite_recipe = Recipe.objects.get(pk=recipe_id)
+        favorite_recipe = get_object_or_404(Recipe, pk=recipe_id)
         if PurchaseList.objects.filter(
                 author=request.user,
                 recipe=favorite_recipe
