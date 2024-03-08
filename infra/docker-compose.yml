@@ -25,7 +25,7 @@ services:
       - media:/app/media
       - static:/app/static
     command: >
-      bash -c "./manage.py collectstatic --noinput && ./manage.py migrate && gunicorn -b 0.0.0.0:8000 foodgram.wsgi"
+      bash -c "./scripts/wait-for-it.sh db:5432 -- ./manage.py collectstatic --noinput && ./manage.py migrate && gunicorn -b 0.0.0.0:8000 foodgram.wsgi"
   frontend:
     build:
       context: ../frontend
