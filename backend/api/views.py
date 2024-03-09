@@ -266,9 +266,12 @@ class FollowRetrieveDeleteView(
                 follower=self.request.user
             ).delete()
             return Response(
-                {"message": "Вы успешно отписались от пользователя."},
                 status=status.HTTP_204_NO_CONTENT
             )
+        return Response(
+            {"message": "Такой подписки не существует."},
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
 
 class FavoriteRetrieveDeleteView(
