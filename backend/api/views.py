@@ -359,7 +359,6 @@ class ShoppingListRetrieveDeleteView(
         ).delete()
         if deleted_count:
             return Response(
-                {"message": "Запись успешно удалена."},
                 status=status.HTTP_204_NO_CONTENT
             )
         return Response(
