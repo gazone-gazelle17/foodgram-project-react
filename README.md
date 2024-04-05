@@ -11,6 +11,9 @@ ___
 + *Djoser*
 + *SimpleJWT*
 + *dataclasses*
++ *Docker*
++ *docker-compose*
++ *nginx*
 
 ## **Запуск проекта**
 ___
